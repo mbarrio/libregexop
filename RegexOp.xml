@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSExport>
+   <Header CharacterSet="CP1252" ExportingTool="IBM InfoSphere DataStage Export" ToolVersion="8" ServerName="ETLDESA.DIT.AEAT" ToolInstanceID="ETLSGTAIIF" Date="2013-06-13" Time="12.15.47" ServerVersion="9.1"/>
+   <StageTypes>
+      <Record Identifier="Regex" DateModified="2013-06-13" TimeModified="12.14.51" Type="StageType" Readonly="0">
+         <Property Name="Category">\Stage Types\Parallel\Processing</Property>
+         <Property Name="ShortDesc">Regex Test</Property>
+         <Property Name="Active">1</Property>
+         <Property Name="RunProg">regexOp</Property>
+         <Property Name="StageSubr">DSP.ActiveRun</Property>
+         <Property Name="OpenRProg">regexOp</Property>
+         <Property Name="OpenRefProg">regexOp</Property>
+         <Property Name="OpenWProg">regexOp</Property>
+         <Property Name="Vendor">AEAT</Property>
+         <Property Name="Author">Miguel Barrio Orsikowsky</Property>
+         <Property Name="Version">1.0.0</Property>
+         <Property Name="MaxInputs">1</Property>
+         <Property Name="MaxOutputs">1</Property>
+         <Property Name="MinInputs">1</Property>
+         <Property Name="MinOutputs">1</Property>
+         <Property Name="SupportsRef">Y</Property>
+         <Property Name="NLSUnMapped">1</Property>
+         <Property Name="NLSOwnMapping">0</Property>
+         <Collection Name="PropertyList" Type="StagePropType">
+            <SubRecord>
+               <Property Name="Name">column</Property>
+               <Property Name="Description">Name of the input column to apply replacement pattern</Property>
+               <Property Name="DisplayStyle">0</Property>
+               <Property Name="DisplayCaption">Input Column</Property>
+               <Property Name="ForInput">0</Property>
+               <Property Name="ForStage">1</Property>
+               <Property Name="ForOutput">0</Property>
+               <Property Name="Type">9</Property>
+               <Property Name="Width">0</Property>
+               <Property Name="Required">1</Property>
+               <Property Name="Locked">0</Property>
+               <Property Name="Hidden">0</Property>
+               <Property Name="TransactionGroupable">0</Property>
+               <Property Name="ConvType">1</Property>
+               <Property Name="Repeating">1</Property>
+               <Property Name="QuoteString">0</Property>
+               <Property Name="ViewData">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">pattern</Property>
+               <Property Name="Description">Match pattern</Property>
+               <Property Name="DisplayStyle">0</Property>
+               <Property Name="DisplayCaption">Match pattern</Property>
+               <Property Name="ForInput">0</Property>
+               <Property Name="ForStage">1</Property>
+               <Property Name="ForOutput">0</Property>
+               <Property Name="Type">0</Property>
+               <Property Name="Width">0</Property>
+               <Property Name="Required">1</Property>
+               <Property Name="Locked">0</Property>
+               <Property Name="Hidden">0</Property>
+               <Property Name="TransactionGroupable">0</Property>
+               <Property Name="ConvType">1</Property>
+               <Property Name="Repeating">0</Property>
+               <Property Name="QuoteString">1</Property>
+               <Property Name="ViewData">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Name">replacement</Property>
+               <Property Name="Description">Replacement expression</Property>
+               <Property Name="DisplayStyle">0</Property>
+               <Property Name="DisplayCaption">Replacement</Property>
+               <Property Name="ForInput">0</Property>
+               <Property Name="ForStage">1</Property>
+               <Property Name="ForOutput">0</Property>
+               <Property Name="Type">0</Property>
+               <Property Name="Width">0</Property>
+               <Property Name="Required">1</Property>
+               <Property Name="Locked">0</Property>
+               <Property Name="Hidden">0</Property>
+               <Property Name="TransactionGroupable">0</Property>
+               <Property Name="ConvType">1</Property>
+               <Property Name="Repeating">0</Property>
+               <Property Name="QuoteString">1</Property>
+               <Property Name="ViewData">0</Property>
+            </SubRecord>
+         </Collection>
+         <Collection Name="MetaBag" Type="MetaProperty">
+            <SubRecord>
+               <Property Name="Owner">CUSTOMPX</Property>
+               <Property Name="Name">Type</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">Execmode</Property>
+               <Property Name="Value">par</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">Preserve</Property>
+               <Property Name="Value">2</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">Part/Col</Property>
+               <Property Name="Value">any|any</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">InputLinkOrder</Property>
+               <Property Name="Value">#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">OutputLinkOrder</Property>
+               <Property Name="Value">#</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTcolumn</Property>
+               <Property Name="Name">Repeats</Property>
+               <Property Name="Value">1</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTcolumn</Property>
+               <Property Name="Name">QuoteString</Property>
+               <Property Name="Value">NONE</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTpattern</Property>
+               <Property Name="Name">Repeats</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTpattern</Property>
+               <Property Name="Name">Parents</Property>
+               <Property Name="Value">column</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTreplacement</Property>
+               <Property Name="Name">Repeats</Property>
+               <Property Name="Value">0</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APTreplacement</Property>
+               <Property Name="Name">Parents</Property>
+               <Property Name="Value">column</Property>
+            </SubRecord>
+            <SubRecord>
+               <Property Name="Owner">APT</Property>
+               <Property Name="Name">MappingPropagate</Property>
+               <Property Name="Value">2</Property>
+            </SubRecord>
+         </Collection>
+         <Property Name="Signature">0</Property>
+         <Property Name="SupportsBrowsing">N,N</Property>
+         <Property Name="JobType">3</Property>
+         <Property Name="SupportsTxnGrouping">N</Property>
+         <Property Name="HiddenOnDefaultPalette">0</Property>
+      </Record>
+   </StageTypes>
+</DSExport>
