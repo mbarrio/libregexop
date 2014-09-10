@@ -60,14 +60,12 @@ RegexOp::RegexOp()
 
 QString RegexOp::unquote(const QString &string)
 {
-    if (string.startsWith('\'') && string.endsWith('\'')) {
+    if (string.length() >= 2 &&
+        (string.startsWith('\'') && string.endsWith('\'') ||
+         string.startsWith('"') && string.endsWith('"'))) {
         return string.mid(1, string.length() - 2);
     } else {
-        if (string.startsWith('"') && string.endsWith('"')) {
-            return string.mid(1, string.length() - 2);
-        } else {
-            return string;
-        }
+        return string;
     }
 }
 
