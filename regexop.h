@@ -47,6 +47,8 @@ private:
     APT_OutputCursor *outCur_;
     QHash<QString, APT_InputAccessorToUString *> inCols_;
     QHash<QString, APT_OutputAccessorToUString *> outCols_;
+
+    QString unquote(const QString &string);
 };
 
 #endif // REGEXOP_H

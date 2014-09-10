@@ -58,6 +58,19 @@ RegexOp::RegexOp()
 {
 }
 
+QString RegexOp::unquote(const QString &string)
+{
+    if (string.startsWith('\'') && string.endsWith('\'')) {
+        return string.mid(1, string.length() - 2);
+    } else {
+        if (string.startsWith('"') && string.endsWith('"')) {
+            return string.mid(1, string.length() - 2);
+        } else {
+            return string;
+        }
+    }
+}
+
 APT_Status RegexOp::initializeFromArgs_(const APT_PropertyList &args, APT_Operator::InitializeContext context)
 {
     APT_Status status = APT_StatusOk;
@@ -101,8 +114,8 @@ APT_Status RegexOp::initializeFromArgs_(const APT_PropertyList &args, APT_Operat
 
             // Store column name -> substitution
             colSubsts_.insert(QString::fromUtf16(colName.content()),
-                              Substitution(QRegExp(QString::fromUtf16(pattern.content())),
-                                           QString::fromUtf16(replacement.content())));
+                              Substitution(QRegExp(unquote(QString::fromUtf16(pattern.content()))),
+                                           unquote(QString::fromUtf16(replacement.content()))));
         }
     }
 
