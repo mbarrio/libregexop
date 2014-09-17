@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DSExport>
-   <Header CharacterSet="CP1252" ExportingTool="IBM InfoSphere DataStage Export" ToolVersion="8" ServerName="ETLDESA.DIT.AEAT" ToolInstanceID="ETLSGTAIIF" Date="2013-06-13" Time="12.15.47" ServerVersion="9.1"/>
+   <Header CharacterSet="CP1252" ExportingTool="IBM InfoSphere DataStage Export" ToolVersion="8" ServerName="ETLDESA.DIT.AEAT" ToolInstanceID="ETLSGTAIIF" Date="2014-09-17" Time="08.21.22" ServerVersion="9.1"/>
    <StageTypes>
-      <Record Identifier="Regex" DateModified="2013-06-13" TimeModified="12.14.51" Type="StageType" Readonly="0">
+      <Record Identifier="Regex" DateModified="2014-09-17" TimeModified="08.21.13" Type="StageType" Readonly="0">
          <Property Name="Category">\Stage Types\Parallel\Processing</Property>
-         <Property Name="ShortDesc">Regex Test</Property>
+         <Property Name="ShortDesc">Regular expression substitutions</Property>
+         <Property Name="Description">Applies substitutions in string columns based on regular expression patterns.</Property>
          <Property Name="Active">1</Property>
          <Property Name="RunProg">regexOp</Property>
          <Property Name="StageSubr">DSP.ActiveRun</Property>
@@ -13,7 +14,8 @@
          <Property Name="OpenWProg">regexOp</Property>
          <Property Name="Vendor">AEAT</Property>
          <Property Name="Author">Miguel Barrio Orsikowsky</Property>
-         <Property Name="Version">1.0.0</Property>
+         <Property Name="Version">0.1.0</Property>
+         <Property Name="Copyright">Miguel Barrio Orsikowsky</Property>
          <Property Name="MaxInputs">1</Property>
          <Property Name="MaxOutputs">1</Property>
          <Property Name="MinInputs">1</Property>
@@ -24,7 +26,7 @@
          <Collection Name="PropertyList" Type="StagePropType">
             <SubRecord>
                <Property Name="Name">column</Property>
-               <Property Name="Description">Name of the input column to apply replacement pattern</Property>
+               <Property Name="Description">Name of the input column to apply replacement</Property>
                <Property Name="DisplayStyle">0</Property>
                <Property Name="DisplayCaption">Input Column</Property>
                <Property Name="ForInput">0</Property>
